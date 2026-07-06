@@ -22,6 +22,7 @@ const RECIPES=[
   "b": 28,
   "zh": 24,
   "v": 55,
+  "y": 4,
   "ing": [
    [
     "spaghetti",
@@ -81,6 +82,7 @@ const RECIPES=[
   "b": 22,
   "zh": 16,
   "v": 34,
+  "y": 8,
   "ing": [
    [
     "kurka_stehna",
@@ -152,6 +154,7 @@ const RECIPES=[
   "b": 38,
   "zh": 22,
   "v": 16,
+  "y": 4,
   "ing": [
    [
     "broccoli",
@@ -199,6 +202,7 @@ const RECIPES=[
   "b": 15,
   "zh": 18,
   "v": 40,
+  "y": 4,
   "ing": [
    [
     "khlib",
@@ -249,6 +253,7 @@ const RECIPES=[
   "b": 12,
   "zh": 22,
   "v": 58,
+  "y": 4,
   "ing": [
    [
     "kartoplia",
@@ -299,6 +304,7 @@ const RECIPES=[
   "b": 38,
   "zh": 20,
   "v": 42,
+  "y": 4,
   "ing": [
    [
     "kurka_file",
@@ -342,6 +348,7 @@ const RECIPES=[
   "b": 26,
   "zh": 24,
   "v": 38,
+  "y": 4,
   "ing": [
    [
     "kapusta",
@@ -389,6 +396,7 @@ const RECIPES=[
   "b": 32,
   "zh": 18,
   "v": 44,
+  "y": 4,
   "ing": [
    [
     "farsh_kur",
@@ -439,6 +447,7 @@ const RECIPES=[
   "b": 38,
   "zh": 22,
   "v": 42,
+  "y": 4,
   "ing": [
    [
     "hrechka",
@@ -489,6 +498,7 @@ const RECIPES=[
   "b": 16,
   "zh": 18,
   "v": 38,
+  "y": 4,
   "ing": [
    [
     "khlib",
@@ -530,6 +540,7 @@ const RECIPES=[
   "b": 38,
   "zh": 22,
   "v": 44,
+  "y": 4,
   "ing": [
    [
     "yalovychyna",
@@ -579,6 +590,7 @@ const RECIPES=[
   "b": 16,
   "zh": 28,
   "v": 30,
+  "y": 4,
   "ing": [
    [
     "kapusta",
@@ -624,6 +636,7 @@ const RECIPES=[
   "b": 32,
   "zh": 26,
   "v": 48,
+  "y": 4,
   "ing": [
    [
     "kartoplia",
@@ -672,6 +685,7 @@ const RECIPES=[
   "b": 11,
   "zh": 10,
   "v": 56,
+  "y": 4,
   "ing": [
    [
     "vivsianka",
@@ -721,6 +735,7 @@ const RECIPES=[
   "b": 34,
   "zh": 16,
   "v": 42,
+  "y": 4,
   "ing": [
    [
     "khek",
@@ -768,6 +783,7 @@ const RECIPES=[
   "b": 22,
   "zh": 10,
   "v": 34,
+  "y": 8,
   "ing": [
    [
     "kurka_stehna",
@@ -822,6 +838,7 @@ const RECIPES=[
   "b": 22,
   "zh": 24,
   "v": 52,
+  "y": 4,
   "ing": [
    [
     "makarony",
@@ -869,6 +886,7 @@ const RECIPES=[
   "b": 14,
   "zh": 18,
   "v": 58,
+  "y": 4,
   "ing": [
    [
     "boroshno",
@@ -921,6 +939,7 @@ const RECIPES=[
   "b": 22,
   "zh": 26,
   "v": 20,
+  "y": 4,
   "ing": [
    [
     "yaitsia",
@@ -968,6 +987,7 @@ const RECIPES=[
   "b": 16,
   "zh": 26,
   "v": 54,
+  "y": 4,
   "ing": [
    [
     "spaghetti",
@@ -1016,6 +1036,7 @@ const RECIPES=[
   "b": 30,
   "zh": 20,
   "v": 58,
+  "y": 4,
   "ing": [
    [
     "rys",
@@ -1064,6 +1085,7 @@ const RECIPES=[
   "b": 12,
   "zh": 10,
   "v": 46,
+  "y": 4,
   "ing": [
    [
     "kabachok",
@@ -1114,6 +1136,7 @@ const RECIPES=[
   "b": 32,
   "zh": 14,
   "v": 40,
+  "y": 4,
   "ing": [
    [
     "khek",
@@ -1157,6 +1180,7 @@ const RECIPES=[
   "b": 32,
   "zh": 12,
   "v": 18,
+  "y": 4,
   "ing": [
    [
     "kurka_file",
@@ -1204,6 +1228,7 @@ const RECIPES=[
   "b": 20,
   "zh": 22,
   "v": 26,
+  "y": 4,
   "ing": [
    [
     "yaitsia",
@@ -1254,6 +1279,7 @@ const RECIPES=[
   "b": 30,
   "zh": 30,
   "v": 32,
+  "y": 4,
   "ing": [
    [
     "skumbria",
@@ -1294,6 +1320,7 @@ const RECIPES=[
   "b": 36,
   "zh": 30,
   "v": 48,
+  "y": 4,
   "ing": [
    [
     "kurka_stehna",
@@ -1339,6 +1366,7 @@ const RECIPES=[
   "b": 34,
   "zh": 12,
   "v": 55,
+  "y": 4,
   "ing": [
    [
     "rys",
@@ -1391,6 +1419,7 @@ const RECIPES=[
   "b": 30,
   "zh": 26,
   "v": 48,
+  "y": 4,
   "ing": [
    [
     "makarony",
@@ -1437,6 +1466,7 @@ const RECIPES=[
   "b": 20,
   "zh": 8,
   "v": 34,
+  "y": 8,
   "ing": [
    [
     "farsh_kur",
@@ -1488,6 +1518,7 @@ const RECIPES=[
   "b": 16,
   "zh": 6,
   "v": 52,
+  "y": 8,
   "ing": [
    [
     "horokh",
@@ -1536,6 +1567,7 @@ const RECIPES=[
   "b": 8,
   "zh": 16,
   "v": 32,
+  "y": 8,
   "ing": [
    [
     "hryby",
@@ -1576,6 +1608,7 @@ const RECIPES=[
   "b": 6,
   "zh": 6,
   "v": 42,
+  "y": 8,
   "ing": [
    [
     "kapusta",
@@ -1628,6 +1661,7 @@ const RECIPES=[
   "b": 34,
   "zh": 40,
   "v": 34,
+  "y": 4,
   "ing": [
    [
     "svynyna",
@@ -1672,6 +1706,7 @@ const RECIPES=[
   "b": 24,
   "zh": 18,
   "v": 38,
+  "y": 4,
   "ing": [
    [
     "syr_km",
@@ -1720,6 +1755,7 @@ const RECIPES=[
   "b": 24,
   "zh": 14,
   "v": 38,
+  "y": 4,
   "ing": [
    [
     "syr_km",
@@ -1766,6 +1802,7 @@ const RECIPES=[
   "b": 12,
   "zh": 18,
   "v": 72,
+  "y": 4,
   "ing": [
    [
     "boroshno",
@@ -1814,6 +1851,7 @@ const RECIPES=[
   "b": 40,
   "zh": 16,
   "v": 42,
+  "y": 4,
   "ing": [
    [
     "kurka_file",
@@ -1864,6 +1902,7 @@ const RECIPES=[
   "b": 9,
   "zh": 5,
   "v": 36,
+  "y": 4,
   "ing": [
    [
     "yogurt",

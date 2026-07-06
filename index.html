@@ -321,6 +321,10 @@ const P=()=>S.profiles[S.pid];
 const rid2r=Object.fromEntries(RECIPES.map(r=>[r.id,r]));
 const portions=()=>Math.max(1,P().a+P().k*0.6);
 const scale=()=>portions()/4;
+/* yieldOf(r) — скільки порцій дає готова страва (базові к-сті на 4 порції);
+   mealsCovered — на скільки прийомів їжі цієї сім'ї її вистачить (округляємо вниз). */
+const yieldOf=r=>r.y||(r.days===2?8:4);
+const mealsCovered=r=>Math.max(1,Math.floor(yieldOf(r)/portions()));
 const fmt=n=>'₴'+Math.round(n).toLocaleString('uk-UA');
 const excluded=()=>[...P().allerg,...S.week.dislikes];
 const okKid=r=>P().k===0||r.kid!==false;
@@ -613,7 +617,7 @@ function renderDish(){
   <div class="dish-nm">${esc(r.n)}</div>
   <div class="meta-chips">
    <span class="mc">⏱ <b>${r.t} хв</b></span>
-   <span class="mc">🍽 <b>${(+(portions()*(r.days===2?2:1)).toFixed(1))}</b> порц.${r.days===2?' (2 дні)':''}</span>
+   <span class="mc">🍽 вистачить на <b>${mealsCovered(r)}</b> ${mealsCovered(r)===1?'прийом':'прийоми'}</span>
    <span class="mc">🔥 <b>${r.k}</b> ккал/порц.</span>
    <span class="mc">БЖВ <b>${r.b}/${r.zh}/${r.v}</b></span>
    <span class="mc" style="color:var(--beet)">≈ <b>${fmt(dishCost(r,f))}</b></span>
