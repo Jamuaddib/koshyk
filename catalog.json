@@ -1,5 +1,5 @@
 {
- "generated": "2026-07-06 08:07",
+ "generated": "2026-07-06 13:13",
  "store": {
   "id": "482211449",
   "name": "Таврія В Одеса DRIVE"
@@ -12,7 +12,7 @@
    "packQty": 1.0,
    "packLabel": "1 кг (вагове)",
    "loose": true,
-   "img": "https://img2.zakaz.ua/upload.version_1.0.02ecfa84224ec0c974fbc03aeb2a1521.350x350.jpeg",
+   "img": "https://img3.zakaz.ua/upload.version_1.0.02ecfa84224ec0c974fbc03aeb2a1521.350x350.jpeg",
    "url": "https://tavriav.zakaz.ua/uk/products/ovochi-kartoplia-bez-tm-ukrayina--tavriav02000000348209/"
   },
   "morkva": {
@@ -55,6 +55,36 @@
    "img": "https://img2.zakaz.ua/upload.version_1.0.87623cc16ba159bc521e4ce83c627f65.350x350.jpeg",
    "url": "https://tavriav.zakaz.ua/uk/products/ovochi-kapusta--tavriav02000000456560/"
   },
+  "pomidory": {
+   "title": "Помідор Мікада Україна",
+   "ean": "tavriav00000000026618",
+   "price": 94.4,
+   "packQty": 1.0,
+   "packLabel": "1 кг (вагове)",
+   "loose": true,
+   "img": "https://img3.zakaz.ua/upload.version_1.0.bc23a440c16ebe1af9d174314dd46305.350x350.jpeg",
+   "url": "https://tavriav.zakaz.ua/uk/products/ovochi-pomidor-ukrayina--tavriav00000000026618/"
+  },
+  "ohirky": {
+   "title": "Огірок колючий Україна",
+   "ean": "tavriav00000000059183",
+   "price": 36.7,
+   "packQty": 1.0,
+   "packLabel": "1 кг (вагове)",
+   "loose": true,
+   "img": "https://img2.zakaz.ua/upload.version_1.0.a204e711f84efa6bd86364b722ca0901.350x350.jpeg",
+   "url": "https://tavriav.zakaz.ua/uk/products/ovochi-ogirok-ukrayina--tavriav00000000059183/"
+  },
+  "perets": {
+   "title": "Перець Україна",
+   "ean": "tavriav02510517000007",
+   "price": 178.4,
+   "packQty": 1.0,
+   "packLabel": "1 кг (вагове)",
+   "loose": true,
+   "img": "https://img2.zakaz.ua/src.1607506733.ad72436478c_2020-12-09_Aliona/src.1607506733.SNCPSG10.obj.0.1.jpg.oe.jpg.pf.jpg.350nowm.jpg.350x.jpg",
+   "url": "https://tavriav.zakaz.ua/uk/products/ovochi-perets-ukrayina--tavriav02510517000007/"
+  },
   "zelen": {
    "title": "Кріп пучок 50г",
    "ean": "04820178330077",
@@ -72,7 +102,7 @@
    "packQty": 0.4,
    "packLabel": "400 г",
    "loose": false,
-   "img": "https://img2.zakaz.ua/136b9585dbf24a4f984b2a1b895611ef/1778389712-s350x350.jpg",
+   "img": "https://img3.zakaz.ua/136b9585dbf24a4f984b2a1b895611ef/1778389712-s350x350.jpg",
    "url": "https://tavriav.zakaz.ua/uk/products/ovochi-kapusta-khaiberri-400g--04820259860257/"
   },
   "kabachok": {
@@ -84,6 +114,16 @@
    "loose": true,
    "img": "https://img2.zakaz.ua/upload.version_1.0.590a1ba13a2d1f6825009873f5f0a6f8.350x350.jpeg",
    "url": "https://tavriav.zakaz.ua/uk/products/ovochi-kabachok--tavriav00000000010463/"
+  },
+  "hryby": {
+   "title": "Печериці закусочні 500г",
+   "ean": "04820285780123",
+   "price": 93.5,
+   "packQty": 0.5,
+   "packLabel": "500 г",
+   "loose": false,
+   "img": "https://img2.zakaz.ua/5a6ee4bd08e04514857f213e749dc569/1756383999-s350x350.jpg",
+   "url": "https://tavriav.zakaz.ua/uk/products/gribi-pecheritsi-500g-ukrayina--04820285780123/"
   },
   "limon": {
    "title": "Лимон ПАР",
@@ -102,7 +142,7 @@
    "packQty": 1.0,
    "packLabel": "1 кг (вагове)",
    "loose": true,
-   "img": "https://img3.zakaz.ua/upload.version_1.0.eb5fecb526337d60e9047f361afe83d2.350x350.jpeg",
+   "img": "https://img2.zakaz.ua/upload.version_1.0.eb5fecb526337d60e9047f361afe83d2.350x350.jpeg",
    "url": "https://tavriav.zakaz.ua/uk/products/frukt-iabluko-ukrayina--tavriav00000000040704/"
   },
   "banany": {
@@ -112,7 +152,7 @@
    "packQty": 1.0,
    "packLabel": "1 кг (вагове)",
    "loose": true,
-   "img": "https://img2.zakaz.ua/abbc5159664844349f928bc897632db9/1740652411-s350x350.jpg",
+   "img": "https://img3.zakaz.ua/abbc5159664844349f928bc897632db9/1740652411-s350x350.jpg",
    "url": "https://tavriav.zakaz.ua/uk/products/frukt-banan--04000007071078/"
   },
   "kurka_file": {
@@ -126,44 +166,64 @@
    "url": "https://tavriav.zakaz.ua/uk/products/file--tavriav02000000256054/"
   },
   "kurka_stehna": {
-   "title": "Стегно куряче свіжоморожене",
-   "ean": "tavriav02000000258164",
-   "price": 110.2,
+   "title": "Гомілка куряча",
+   "ean": "tavriav02000000257914",
+   "price": 83.9,
    "packQty": 1.0,
    "packLabel": "1 кг (вагове)",
    "loose": true,
-   "img": "https://img2.zakaz.ua/upload.version_1.0.c343b64d8037e9782d6afe94666036c7.350x350.jpeg",
-   "url": "https://tavriav.zakaz.ua/uk/products/m-iaso-ukrayina--tavriav02000000258164/"
+   "img": "https://img2.zakaz.ua/upload.version_1.0.22d2dd0e8da7b323e2410516ceba08e7.350x350.jpeg",
+   "url": "https://tavriav.zakaz.ua/uk/products/m-iaso--tavriav02000000257914/"
+  },
+  "farsh_sv": {
+   "title": "Фарш свинячий",
+   "ean": "tavriav02000000567563",
+   "price": 146.9,
+   "packQty": 1.0,
+   "packLabel": "1 кг (вагове)",
+   "loose": true,
+   "img": "https://img2.zakaz.ua/upload.version_1.0.3b58f6588f05ff5128a595aca0b3daaf.350x350.jpeg",
+   "url": "https://tavriav.zakaz.ua/uk/products/farsh-ukrayina--tavriav02000000567563/"
   },
   "farsh_kur": {
-   "title": "Фарш курячий",
-   "ean": "tavriav02000000619989",
-   "price": 167.9,
+   "title": "Фарш свинячий",
+   "ean": "tavriav02000000567563",
+   "price": 146.9,
    "packQty": 1.0,
    "packLabel": "1 кг (вагове)",
    "loose": true,
-   "img": "https://img3.zakaz.ua/upload.version_1.0.0d70942208be07419a5ce6f32b1f9883.350x350.jpeg",
-   "url": "https://tavriav.zakaz.ua/uk/products/farsh-bez-tm-ukrayina--tavriav02000000619989/"
+   "img": "https://img2.zakaz.ua/upload.version_1.0.3b58f6588f05ff5128a595aca0b3daaf.350x350.jpeg",
+   "url": "https://tavriav.zakaz.ua/uk/products/farsh-ukrayina--tavriav02000000567563/"
+  },
+  "svynyna": {
+   "title": "Кістки свинячі",
+   "ean": "tavriav02000000636740",
+   "price": 10.5,
+   "packQty": 1.0,
+   "packLabel": "1 кг (вагове)",
+   "loose": true,
+   "img": "https://img3.zakaz.ua/0cb6544a4afc4f2982e7e4f878360a9e/1690171043-s350x350.jpg",
+   "url": "https://tavriav.zakaz.ua/uk/products/kistka--tavriav02000000636740/"
   },
   "yalovychyna": {
-   "title": "Яловичина Пан Іван армійська 500г",
-   "ean": "04820036740208",
-   "price": 131.3,
-   "packQty": 0.5,
-   "packLabel": "500 г",
-   "loose": false,
-   "img": "https://img3.zakaz.ua/d669dce4b96947149c428c50958b0afc/1697509576-s350x350.jpg",
-   "url": "https://tavriav.zakaz.ua/uk/products/m-iaso-pan-ivan-500g--04820036740208/"
-  },
-  "sosysky": {
-   "title": "Сосиски Фарро М'ясні перший сорт",
-   "ean": "tavriav02000016479553",
-   "price": 151.8,
+   "title": "М'ясо яловичини обрізки",
+   "ean": "tavriav02000000587080",
+   "price": 41.9,
    "packQty": 1.0,
    "packLabel": "1 кг (вагове)",
    "loose": true,
-   "img": "https://img3.zakaz.ua/9f1739c0a32b472d8f32a76edefa9962/1743670881-s350x350.jpg",
-   "url": "https://tavriav.zakaz.ua/uk/products/sosiska-farro-ukrayina--tavriav02000016479553/"
+   "img": "https://img2.zakaz.ua/c0c6f6631b0b4a01ba809ce80a715069/1766597253-s350x350.jpg",
+   "url": "https://tavriav.zakaz.ua/uk/products/m-iaso--tavriav02000000587080/"
+  },
+  "sosysky": {
+   "title": "Сосиски Pollo Зі скоринкою перший сорт 260г",
+   "ean": "04820224581675",
+   "price": 40.2,
+   "packQty": 0.26,
+   "packLabel": "260 г",
+   "loose": false,
+   "img": "https://img3.zakaz.ua/88decbf260a74772b92bb6f04a6cc2f9/1758790675-s350x350.jpg",
+   "url": "https://tavriav.zakaz.ua/uk/products/sosiska-260g--04820224581675/"
   },
   "khek": {
    "title": "Тушка Хека в глазурі с/м",
@@ -202,7 +262,7 @@
    "packQty": 1.0,
    "packLabel": "1000 мл",
    "loose": false,
-   "img": "https://img3.zakaz.ua/531b37ab35c44182b86c23e3f34c53ca/1767187880-s350x350.jpg",
+   "img": "https://img2.zakaz.ua/531b37ab35c44182b86c23e3f34c53ca/1767187880-s350x350.jpg",
    "url": "https://tavriav.zakaz.ua/uk/products/moloko-1000ml--05941133003658/"
   },
   "smetana": {
@@ -212,7 +272,7 @@
    "packQty": 0.4,
    "packLabel": "400 г",
    "loose": false,
-   "img": "https://img3.zakaz.ua/4cdce50de14f447688ccc3ad8480adfc/1738520442-s350x350.jpg",
+   "img": "https://img2.zakaz.ua/4cdce50de14f447688ccc3ad8480adfc/1738520442-s350x350.jpg",
    "url": "https://tavriav.zakaz.ua/uk/products/smetana-400g-ukrayina--04823071311938/"
   },
   "maslo": {
@@ -226,114 +286,114 @@
    "url": "https://tavriav.zakaz.ua/uk/products/maslo-chutianka-180g--04820144812033/"
   },
   "syr_tv": {
-   "title": "Сир Шостка твердий 50% 250г",
-   "ean": "04823065730028",
-   "price": 182.0,
-   "packQty": 0.25,
-   "packLabel": "250 г",
-   "loose": false,
-   "img": "https://img3.zakaz.ua/c9ada3d27d5d438abfe9d6eb093f186f/1772461996-s350x350.jpg",
-   "url": "https://tavriav.zakaz.ua/uk/products/ukrayina--04823065730028/"
-  },
-  "syr_km": {
-   "title": "Сир кисломолочний Яготинський 9% 350г",
-   "ean": "04823005208808",
-   "price": 98.4,
-   "packQty": 0.35,
-   "packLabel": "350 г",
-   "loose": false,
-   "img": "https://img3.zakaz.ua/5b4da7d3e52442098554d83502c068d6/1774256006-s350x350.jpg",
-   "url": "https://tavriav.zakaz.ua/uk/products/sir-iagotin-350g--04823005208808/"
-  },
-  "yogurt": {
-   "title": "Йогурт Галичина манго 2,2% 300г",
-   "ean": "04820222762823",
-   "price": 29.3,
-   "packQty": 0.3,
-   "packLabel": "300 г",
-   "loose": false,
-   "img": "https://img3.zakaz.ua/885d01ba9c0d4f269fa451a46af47125/1758725895-s350x350.jpg",
-   "url": "https://tavriav.zakaz.ua/uk/products/iogurt-galichina-300g--04820222762823/"
-  },
-  "hrechka": {
-   "title": "Крупа гречана",
-   "ean": "tavriav00000000039412",
-   "price": 65.6,
-   "packQty": 1.0,
-   "packLabel": "1 кг (вагове)",
-   "loose": true,
-   "img": "https://img2.zakaz.ua/upload.version_1.0.d4235ca60af074b4c1e621a0b60dd4c5.350x350.jpeg",
-   "url": "https://tavriav.zakaz.ua/uk/products/krupa-bez-tm-ukrayina--tavriav00000000039412/"
-  },
-  "rys": {
-   "title": "Рис січка",
-   "ean": "tavriav00000000010011",
-   "price": 38.8,
-   "packQty": 1.0,
-   "packLabel": "1 кг (вагове)",
-   "loose": true,
-   "img": "https://img3.zakaz.ua/upload.version_1.0.45281478761a4b38d7592584ffa42bf8.350x350.jpeg",
-   "url": "https://tavriav.zakaz.ua/uk/products/krupa--tavriav00000000010011/"
-  },
-  "bulgur": {
-   "title": "Крупа Булгур",
-   "ean": "tavriav02000014130920",
-   "price": 40.9,
-   "packQty": 1.0,
-   "packLabel": "1 кг (вагове)",
-   "loose": true,
-   "img": "https://img2.zakaz.ua/upload.version_1.0.b4bd249220b7bc98a63a089394efedd0.350x350.jpeg",
-   "url": "https://tavriav.zakaz.ua/uk/products/krupa--tavriav02000014130920/"
-  },
-  "vivsianka": {
-   "title": "Пластівці вівсяні Українська Зірка 500г",
-   "ean": "tavriav02000013154903",
-   "price": 24.1,
-   "packQty": 0.5,
-   "packLabel": "500 г",
-   "loose": false,
-   "img": "https://img2.zakaz.ua/upload.version_1.0.44b92d71097251794dde380eb8f8f8aa.350x350.jpeg",
-   "url": "https://tavriav.zakaz.ua/uk/products/plastivtsi-ukrayinska-zirka-500g--tavriav02000013154903/"
-  },
-  "makarony": {
-   "title": "Макаронні вироби Ярослав Вермішель довга Екстра 1кг",
-   "ean": "04820202460039",
-   "price": 45.4,
+   "title": "Сироватка Волошкове поле пастеризована 1кг",
+   "ean": "04820004230335",
+   "price": 18.8,
    "packQty": 1.0,
    "packLabel": "1000 г",
    "loose": false,
-   "img": "https://img2.zakaz.ua/e851ae362b3c49699f5e3352419dca47/1732706254-s350x350.jpg",
-   "url": "https://tavriav.zakaz.ua/uk/products/makaroni-kmf-1000g--04820202460039/"
+   "img": "https://img2.zakaz.ua/3de25a7c549a403d9e380fd8fccbc78a/1756915446-s350x350.jpg",
+   "url": "https://tavriav.zakaz.ua/uk/products/sirovatka-voloshkove-pole-1000ml-ukrayina--04820004230335/"
   },
-  "spaghetti": {
-   "title": "Макаронні вироби Тая Спагетіні 700г",
-   "ean": "04820245300118",
-   "price": 44.0,
-   "packQty": 0.7,
-   "packLabel": "700 г",
-   "loose": false,
-   "img": "https://img2.zakaz.ua/upload.version_1.0.803b3c8f30db65ac76a4dc056d47b128.350x350.jpeg",
-   "url": "https://tavriav.zakaz.ua/uk/products/makaroni-taia--04820245300118/"
-  },
-  "boroshno": {
-   "title": "Борошно пшеничне вищий гатунок",
-   "ean": "tavriav02000000448732",
-   "price": 18.7,
+  "syr_km": {
+   "title": "Сироватка Волошкове поле пастеризована 1кг",
+   "ean": "04820004230335",
+   "price": 18.8,
    "packQty": 1.0,
-   "packLabel": "1 кг (вагове)",
-   "loose": true,
-   "img": "https://img3.zakaz.ua/upload.version_1.0.1fe2b61becd3dcd815605adb94317017.350x350.jpeg",
-   "url": "https://tavriav.zakaz.ua/uk/products/boroshno--tavriav02000000448732/"
+   "packLabel": "1000 г",
+   "loose": false,
+   "img": "https://img2.zakaz.ua/3de25a7c549a403d9e380fd8fccbc78a/1756915446-s350x350.jpg",
+   "url": "https://tavriav.zakaz.ua/uk/products/sirovatka-voloshkove-pole-1000ml-ukrayina--04820004230335/"
   },
-  "horokh": {
-   "title": "Горох Хуторок колотий 800г",
-   "ean": "04823127306314",
-   "price": 39.8,
+  "yogurt": {
+   "title": "Йогурт 7 Ананас-манго 1% 400г",
+   "ean": "04823071332032",
+   "price": 28.3,
+   "packQty": 0.4,
+   "packLabel": "400 г",
+   "loose": false,
+   "img": "https://img3.zakaz.ua/src.1637598879.ad72436478c_2021-11-23_Yulia_G/src.1637598879.SNCPSG10.obj.0.1.jpg.oe.jpg.pf.jpg.350nowm.jpg.350x.jpg",
+   "url": "https://tavriav.zakaz.ua/uk/products/iogurt-400g-ukrayina--04823071332032/"
+  },
+  "hrechka": {
+   "title": "Крупа гречана Українська Зірка 800г",
+   "ean": "04823071339499",
+   "price": 59.8,
    "packQty": 0.8,
    "packLabel": "800 г",
    "loose": false,
-   "img": "https://img2.zakaz.ua/77b0f4f291df42d5bdaa0dfeac6bda96/1777541397-s350x350.jpg",
-   "url": "https://tavriav.zakaz.ua/uk/products/krupa-khutorok-800g-ukrayina--04823127306314/"
+   "img": "https://img3.zakaz.ua/0d7365d8a89c490b846ebef49961c0dd/1757397556-s350x350.jpg",
+   "url": "https://tavriav.zakaz.ua/uk/products/krupa-ukrayinska-zirka-800g--04823071339499/"
+  },
+  "rys": {
+   "title": "Рис Українська Зірка подрібнений 1кг",
+   "ean": "tavriav02000008748865",
+   "price": 38.8,
+   "packQty": 1.0,
+   "packLabel": "1000 г",
+   "loose": false,
+   "img": "https://img2.zakaz.ua/src.1622074581.ad72436478c_2021-06-04_Yulia_G/src.1622074581.SNCPSG10.obj.0.1.jpg.oe.jpg.pf.jpg.350nowm.jpg.350x.jpg",
+   "url": "https://tavriav.zakaz.ua/uk/products/krupa-ukrayinska-zirka-1000g--tavriav02000008748865/"
+  },
+  "bulgur": {
+   "title": "Крупа булгур Українська Зірка 500г",
+   "ean": "tavriav02000012506352",
+   "price": 31.4,
+   "packQty": 0.5,
+   "packLabel": "500 г",
+   "loose": false,
+   "img": "https://img3.zakaz.ua/b9ddcc46379341a79df3fafd1abfe6c6/1775130436-s350x350.jpg",
+   "url": "https://tavriav.zakaz.ua/uk/products/krupa-ukrayinska-zirka-500g--tavriav02000012506352/"
+  },
+  "vivsianka": {
+   "title": "Каша вівсяна AXA яблуко-кориця 40г",
+   "ean": "04820008124500",
+   "price": 21.8,
+   "packQty": 0.8,
+   "packLabel": "800 г",
+   "loose": false,
+   "img": "https://img2.zakaz.ua/upload.version_1.0.9173f7f248a35ea62f9691d85533ad3e.350x350.jpeg",
+   "url": "https://tavriav.zakaz.ua/uk/products/kasha-aksa-800g--04820008124500/"
+  },
+  "makarony": {
+   "title": "Макаронні вироби 7 спіралі 800г",
+   "ean": "04823071336214",
+   "price": 31.4,
+   "packQty": 0.8,
+   "packLabel": "800 г",
+   "loose": false,
+   "img": "https://img3.zakaz.ua/upload.version_1.0.59777d23619772a03aa5480e25325c5d.350x350.jpeg",
+   "url": "https://tavriav.zakaz.ua/uk/products/makaroni-7-800g-ukrayina--04823071336214/"
+  },
+  "spaghetti": {
+   "title": "Макаронні вироби Ярка Спагетті 450г",
+   "ean": "04820032551945",
+   "price": 23.7,
+   "packQty": 0.45,
+   "packLabel": "450 г",
+   "loose": false,
+   "img": "https://img2.zakaz.ua/9224e891464e4ba997a819b378d125d1/1781112185-s350x350.jpg",
+   "url": "https://tavriav.zakaz.ua/uk/products/makaroni-ukrayina--04820032551945/"
+  },
+  "boroshno": {
+   "title": "Борошно 7 1кг",
+   "ean": "04823071332575",
+   "price": 23.0,
+   "packQty": 1.0,
+   "packLabel": "1000 г",
+   "loose": false,
+   "img": "https://img2.zakaz.ua/05.1652014119.ad72436478c_2022-05-09_Victoria/05.1652014119.SNCPSG10.obj.0.1.jpg.oe.jpg.pf.jpg.350nowm.jpg.350x.jpg",
+   "url": "https://tavriav.zakaz.ua/uk/products/boroshno-1000g-ukrayina--04823071332575/"
+  },
+  "horokh": {
+   "title": "Крупа горохова Українська Зірка 1кг",
+   "ean": "tavriav02000000019536",
+   "price": 24.1,
+   "packQty": 1.0,
+   "packLabel": "1000 г",
+   "loose": false,
+   "img": "https://img2.zakaz.ua/src.1622063182.ad72436478c_2021-06-04_Yulia_G/src.1622063182.SNCPSG10.obj.0.1.jpg.oe.jpg.pf.jpg.350nowm.jpg.350x.jpg",
+   "url": "https://tavriav.zakaz.ua/uk/products/krupa-ukrayinska-zirka-1000g--tavriav02000000019536/"
   },
   "oliia": {
    "title": "Олія соняшникова Субота рафінована 0,815л",
@@ -342,7 +402,7 @@
    "packQty": 0.815,
    "packLabel": "815 мл",
    "loose": false,
-   "img": "https://img3.zakaz.ua/4576ebdb6633487fa3662af4e993e66a/1775129376-s350x350.jpg",
+   "img": "https://img2.zakaz.ua/4576ebdb6633487fa3662af4e993e66a/1775129376-s350x350.jpg",
    "url": "https://tavriav.zakaz.ua/uk/products/oliia-subota-815ml--04823071337211/"
   },
   "sil": {
@@ -356,14 +416,14 @@
    "url": "https://tavriav.zakaz.ua/uk/products/sil-bez-tm-1000g--04820267290015/"
   },
   "tsukor": {
-   "title": "Цукор Таврія",
-   "ean": "tavriav02000000486956",
-   "price": 26.2,
+   "title": "Цукор Українська Зірка 1кг",
+   "ean": "tavriav02000000022840",
+   "price": 30.4,
    "packQty": 1.0,
-   "packLabel": "1 кг (вагове)",
-   "loose": true,
-   "img": "https://img2.zakaz.ua/upload.version_1.0.059fae6b1e17e3e56c9c968559ca1c4f.350x350.jpeg",
-   "url": "https://tavriav.zakaz.ua/uk/products/tsukor-tavriia--tavriav02000000486956/"
+   "packLabel": "1000 г",
+   "loose": false,
+   "img": "https://img3.zakaz.ua/src.1622242125.ad72436478c_2021-06-04_Yulia_G/src.1622242125.SNCPSG10.obj.0.1.jpg.oe.jpg.pf.jpg.350nowm.jpg.350x.jpg",
+   "url": "https://tavriav.zakaz.ua/uk/products/tsukor-ukrayinska-zirka-1000g--tavriav02000000022840/"
   },
   "spetsii": {
    "title": "Перець чорний Пікантна Кухня мелений 20г",
@@ -376,14 +436,14 @@
    "url": "https://tavriav.zakaz.ua/uk/products/chornii-perets-pikantna-kukhnia--04820067421206/"
   },
   "chai": {
-   "title": "Чай чорний Alookozay 25шт",
-   "ean": "04820229040832",
-   "price": 43.9,
-   "packQty": 25.0,
-   "packLabel": "25 шт",
+   "title": "Чай чорний 7 Цейлонський 1,5г*20шт",
+   "ean": "04820117885354",
+   "price": 14.7,
+   "packQty": 20.0,
+   "packLabel": "20 шт",
    "loose": false,
-   "img": "https://img2.zakaz.ua/upload.version_1.0.c8528414f4a93082fa6f0983d83e3d83.350x350.jpeg",
-   "url": "https://tavriav.zakaz.ua/uk/products/chai-alokozai--04820229040832/"
+   "img": "https://img3.zakaz.ua/247fb26b2b6e409ebe668b89ca7cb3cb/1742898965-s350x350.jpg",
+   "url": "https://tavriav.zakaz.ua/uk/products/chai-semerka--04820117885354/"
   },
   "tomat_pasta": {
    "title": "Паста томатна Українська Зірка Херсонська 25% 450г",
@@ -394,6 +454,16 @@
    "loose": false,
    "img": "https://img2.zakaz.ua/f91ee3fe279d4a5198475f46739d7541/1724983101-s350x350.jpg",
    "url": "https://tavriav.zakaz.ua/uk/products/pasta-tomatna-ukrayinska-zirka-450g--04823071339147/"
+  },
+  "tomaty_vl": {
+   "title": "Продукт томатний 7 25% 485г",
+   "ean": "04823071305364",
+   "price": 46.5,
+   "packQty": 0.485,
+   "packLabel": "485 г",
+   "loose": false,
+   "img": "https://img2.zakaz.ua/2ff017fe17f64555b53a0643252775be/1758526593-s350x350.jpg",
+   "url": "https://tavriav.zakaz.ua/uk/products/pasta-tomatna-7-485g-ukrayina--04823071305364/"
   },
   "kvasolia": {
    "title": "Квасоля делікатесна біла 500г",
@@ -406,14 +476,14 @@
    "url": "https://tavriav.zakaz.ua/uk/products/ovochi-kvasolia-500g--04823071308792/"
   },
   "soi_sous": {
-   "title": "Соус соєвий Щедро Класичний 0,8л",
-   "ean": "04823097411605",
-   "price": 85.0,
-   "packQty": 0.8,
-   "packLabel": "800 мл",
+   "title": "Соус соєвий Щедро Класичний 200мл",
+   "ean": "04823097410776",
+   "price": 25.1,
+   "packQty": 0.2,
+   "packLabel": "200 мл",
    "loose": false,
-   "img": "https://img2.zakaz.ua/8bb74355dbe2423c89f38e160de535ee/1767349809-s350x350.jpg",
-   "url": "https://tavriav.zakaz.ua/uk/products/sous-priprava-shchedro-800ml-ukrayina--04823097411605/"
+   "img": "https://img3.zakaz.ua/33464c05b3d84242b20f96736e9e09d6/1767349809-s350x350.jpg",
+   "url": "https://tavriav.zakaz.ua/uk/products/sous-priprava-shchedro-200ml-ukrayina--04823097410776/"
   },
   "khlib": {
    "title": "Хліб Нове Діло Бабусин нарізаний 350г",
@@ -422,7 +492,7 @@
    "packQty": 1.0,
    "packLabel": "1 шт",
    "loose": false,
-   "img": "https://img2.zakaz.ua/dca406f79f284315b631d7f5063e629c/1689912115-s350x350.jpg",
+   "img": "https://img3.zakaz.ua/dca406f79f284315b631d7f5063e629c/1689912115-s350x350.jpg",
    "url": "https://tavriav.zakaz.ua/uk/products/khlib-svizhii-khlib-ukrayina--04820084371010/"
   },
   "lavash": {
