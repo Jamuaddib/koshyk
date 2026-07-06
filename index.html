@@ -325,6 +325,11 @@ const scale=()=>portions()/4;
    mealsCovered — на скільки прийомів їжі цієї сім'ї її вистачить (округляємо вниз). */
 const yieldOf=r=>r.y||(r.days===2?8:4);
 const mealsCovered=r=>Math.max(1,Math.floor(yieldOf(r)/portions()));
+/* Період — будь-який 3–14 днів. Підказка про магазин М'ЯКА: нічого не обрубаємо. */
+function periodHint(){const d=S.week.days;
+ return d>=10?'Довший період — зручніше з великим магазином (METRO/Ашан). Але бери будь-який':
+        d>=8?'Підійде будь-який магазин':
+        'Зручно з ваговими (Таврія/АТБ) — свіже, скільки треба';}
 const fmt=n=>'₴'+Math.round(n).toLocaleString('uk-UA');
 const excluded=()=>[...P().allerg,...S.week.dislikes];
 const okKid=r=>P().k===0||r.kid!==false;
@@ -523,12 +528,9 @@ function renderOnboard(){
   <div class="hint" style="margin-top:12px">Профіль зберігається — налаштовуєш один раз</div></div>`;
  if(S.wz===1)return `<div class="ob">${dots(1)}
   <h1>На скільки й звідки?</h1><p class="sub">Спершу період — від нього залежить, який магазин зручніший. Ціни й упаковки залежать від магазину, обереш раз.</p>
-  <div class="fieldlbl">Меню на</div>
-  <div class="grid2" style="margin-bottom:4px">
-   <button class="tgl ${S.week.days<=7?'on':''}" onclick="UI.period(7)"><span>🗓</span>Тиждень · 7 днів</button>
-   <button class="tgl ${S.week.days>7?'on':''}" onclick="UI.period(14)"><span>🗓</span>Два тижні · 14</button>
-  </div>
-  <div class="hint" style="margin:2px 2px 6px">${S.week.days>7?'На 2 тижні зручніше з великим магазином (METRO/Ашан) — беруть про запас':'На тиждень зручно з ваговими (Таврія/АТБ) — свіже, скільки треба'}</div>
+  <div class="fieldlbl">Меню на <b id="ob-per">${S.week.days}</b> днів</div>
+  <input type="range" min="3" max="14" value="${S.week.days}" oninput="UI.period(this.value)" style="width:100%">
+  <div class="hint" id="ob-perhint" style="margin:6px 2px 8px">${periodHint()}</div>
   ${CITIES.length?`<div class="fieldlbl">Місто</div>
   <select class="sel" onchange="UI.city(this.value)">
    ${CITIES.map(c=>`<option value="${c.key}" ${c.key===S.city?'selected':''}>${esc(c.name)}</option>`).join('')}
@@ -664,6 +666,7 @@ function renderBasket(){
   const leftTxt=fmtLeft(x.id,x.left);
   rows+=`<div class="bi ${ok?'done':''}" data-id="${x.id}" onclick="UI.check('${x.id}',this)">
    <div class="ck">${ok?'✓':''}</div>
+   ${x.prod&&x.prod.img?`<img class="pthumb" src="${x.prod.img}" loading="lazy" onerror="this.remove()" style="width:36px;height:36px;border-radius:8px;object-fit:cover;flex:none">`:''}
    <div style="flex:1;min-width:0"><div class="nm">${esc(x.name)}</div>
     ${x.prod?`<div class="prod">${esc(x.prod.title||'')}</div>`:''}
     ${leftTxt?`<div class="left">↩ ${leftTxt}</div>`:''}
@@ -770,7 +773,8 @@ function settingsSheetHtml(){
   <div class="set-row"><div class="lbl">Алергії / не їмо ніколи</div>
    <div class="chips">${EXCL.map(([k,e,n])=>`<button class="chip ex ${p.allerg.includes(k)?'on':''}" onclick="UI.sallerg(this,'${k}')">${e} ${n}</button>`).join('')}</div></div>
   <button class="btn" onclick="UI.saveSettings()">Зберегти й оновити меню</button>
-  ${S.profiles.length>1?`<button class="txtbtn" onclick="UI.delProfile()">🗑 Видалити цей профіль</button>`:''}`;}
+  ${S.profiles.length>1?`<button class="txtbtn" onclick="UI.delProfile()">🗑 Видалити цей профіль</button>`:''}
+  <button class="txtbtn" onclick="UI.resetOnboard()">🔄 Пройти онбординг заново</button>`;}
 
 /* ---------- СВАЙПИ: картки страв + навігація між екранами ---------- */
 let sw={mode:null,el:null,x0:0,y0:0,dx:0,dy:0};
@@ -822,7 +826,8 @@ window.UI={
   if(!Object.values(m).some(Boolean)){m[k]=true;return;}
   el.classList.toggle('on');},
  allerg(el,k){hap();const a=P().allerg;a.includes(k)?a.splice(a.indexOf(k),1):a.push(k);el.classList.toggle('on');},
- period(n){hap();S.week.days=n;render();},
+ period(v){S.week.days=+v;const p=$('#ob-per');if(p)p.textContent=v;
+  const h=$('#ob-perhint');if(h)h.textContent=periodHint();},
  days(v){S.week.days=+v;const el=document.getElementById('ob-days');if(el)el.textContent=v;},
  budget(v){P().budget=+v;const el=document.getElementById('ob-bud');if(el)el.textContent=fmt(+v);},
  kcalOn(el){hap();P().kcalOn=!P().kcalOn;el.classList.toggle('on');
@@ -834,6 +839,7 @@ window.UI={
   S.view='menu';S.generating=true;render();
   setTimeout(()=>{generateWeek();S.generating=false;hap('ok');render();},750);},
  changeStore(){hap();S._reStore=true;S.onboarded=false;S.wz=1;S.view='menu';render();},
+ resetOnboard(){hap();closeSheet();S.onboarded=false;S._reStore=false;S.wz=0;S.view='menu';save();render();},
  checkout(){hap();openSheet(loginSheetHtml());
   setTimeout(()=>{const el=$('#lg-phone');if(el&&!el.value)el.focus();},60);},
  async doLogin(){
@@ -844,9 +850,25 @@ window.UI={
   let res;try{res=await zpost('/api/zakaz-login',{phone,password:pass,chain:curStore().chain||'tavriav'});}
   catch(_){res={ok:false,d:{errors:[{description:'Немає зв’язку із сервером. Запусти start.py.'}]}};}
   btn.disabled=false;
-  if(res.ok&&res.d.sid){SID=res.d.sid;hap('ok');closeSheet();
-   toast('Вхід виконано'+(res.d.user&&res.d.user.name?': '+res.d.user.name:''));}
+  if(res.ok&&res.d.sid){SID=res.d.sid;hap('ok');UI.sendToStore();}
   else{msg.style.color='var(--mustard)';msg.textContent=zErr(res.d);hap('error');}},
+ async sendToStore(){
+  const chain=curStore().chain||'tavriav';
+  const items=activeItems().filter(i=>i.prod&&i.prod.ean).map(i=>{
+   const pu=packUp(i.id,i.qty);
+   return {ean:i.prod.ean,operation:'add',amount:pu.packs||Math.max(1,Math.round(i.qty))};});
+  openSheet(`<h3 style="margin:2px 2px 8px">Збираю кошик у магазині…</h3><div class="hint" style="margin:2px">Додаю ${items.length} позицій у твій акаунт zakaz.</div>`);
+  // почистимо кошик, щоб не задвоювати при повторному оформленні, і додамо заново
+  await zpost('/api/zakaz/cart/clear/?chain='+chain,{}).catch(()=>{});
+  let res;try{res=await zpost('/api/zakaz/cart/items/?chain='+chain,{items});}catch(_){res={ok:false,d:{}};}
+  if(res.ok){hap('ok');
+   openSheet(`<h3 style="margin:2px 2px 8px">✅ Кошик зібрано в магазині</h3>
+    <p class="sheep" style="color:var(--muted);font-size:13.5px;margin:0 2px 14px">${items.length} позицій у твоєму кошику zakaz. Лишилось обрати доставку й оплатити на сайті магазину.</p>
+    <button class="btn" onclick="UI.openCart('${chain}')">Відкрити кошик zakaz →</button>`);}
+  else{hap('error');
+   openSheet(`<h3 style="margin:2px 2px 8px">Не вдалось додати</h3><div class="hint" style="margin:2px 2px 12px">${zErr(res.d)}</div><button class="btn soft" onclick="UI.closeSheet()">Ок</button>`);}},
+ openCart(chain){const u=`https://${chain}.zakaz.ua/uk/cart/`;closeSheet();
+  try{if(tg&&tg.openLink)tg.openLink(u);else window.open(u,'_blank');}catch(_){window.open(u,'_blank');}},
 
  go(v){hap();nav(v);},
  back(){hap();nav('menu');},
