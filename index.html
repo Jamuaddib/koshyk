@@ -348,10 +348,18 @@ function packUp(id,need){
  const packs=Math.max(1,Math.ceil(need/pk-1e-9));
  const qty=packs*pk,left=qty-need;
  return {qty,packs,label:packs+' × '+label,price:packs*price,left};}
-function fmtLeft(id,left){const u=ING[id][1];
- if(u==='кг')return left>=.05?`залишиться ≈ ${Math.round(left*1000)} г`:'';
- if(u==='л')return left>=.1?`залишиться ≈ ${(+left.toFixed(1))} л`:'';
- return left>=1?`залишиться ${Math.round(left)} ${u}`:'';}
+/* Ярус зберігання за категорією (магазин строку придатності не віддає — ставимо самі):
+   fresh — швидко псується (м'ясо/риба/хліб), mid — тиждень (овочі/молочне),
+   stable — довго (бакалія/соуси). Надлишок пачки підписуємо чесно за ярусом. */
+const SHELF={veg:'mid',meat:'fresh',dairy:'mid',groc:'stable',sauce:'stable',bread:'fresh'};
+function fmtLeft(id,left){const [,u,,cat]=ING[id];let amt;
+ if(u==='кг'){if(left<.05)return '';amt=`${Math.round(left*1000)} г`;}
+ else if(u==='л'){if(left<.1)return '';amt=`${(+left.toFixed(1))} л`;}
+ else{if(left<1)return '';amt=`${Math.round(left)} ${u}`;}
+ const tier=SHELF[cat]||'mid';
+ if(tier==='stable')return `запас ≈ ${amt}`;                 // крупа/олія — не проблема, це запас
+ if(tier==='fresh')return `🧊 ≈ ${amt} у морозилку`;          // м'ясо/риба — чесно: заморозити
+ return `залишиться ≈ ${amt}`;}                              // овочі/молочне — просто залишок
 
 /* ---------- ГЕНЕРАЦІЯ ---------- */
 function mealShare(meal){const en=enabledMeals();const sum=en.reduce((s,m)=>s+m[3],0);
@@ -514,7 +522,13 @@ function renderOnboard(){
   <button class="btn" onclick="UI.wz(1)">Почати</button>
   <div class="hint" style="margin-top:12px">Профіль зберігається — налаштовуєш один раз</div></div>`;
  if(S.wz===1)return `<div class="ob">${dots(1)}
-  <h1>Звідки замовлятимеш?</h1><p class="sub">Ціни, упаковки й наявність залежать від магазину. Обереш раз — зможеш змінити будь-коли.</p>
+  <h1>На скільки й звідки?</h1><p class="sub">Спершу період — від нього залежить, який магазин зручніший. Ціни й упаковки залежать від магазину, обереш раз.</p>
+  <div class="fieldlbl">Меню на</div>
+  <div class="grid2" style="margin-bottom:4px">
+   <button class="tgl ${S.week.days<=7?'on':''}" onclick="UI.period(7)"><span>🗓</span>Тиждень · 7 днів</button>
+   <button class="tgl ${S.week.days>7?'on':''}" onclick="UI.period(14)"><span>🗓</span>Два тижні · 14</button>
+  </div>
+  <div class="hint" style="margin:2px 2px 6px">${S.week.days>7?'На 2 тижні зручніше з великим магазином (METRO/Ашан) — беруть про запас':'На тиждень зручно з ваговими (Таврія/АТБ) — свіже, скільки треба'}</div>
   ${CITIES.length?`<div class="fieldlbl">Місто</div>
   <select class="sel" onchange="UI.city(this.value)">
    ${CITIES.map(c=>`<option value="${c.key}" ${c.key===S.city?'selected':''}>${esc(c.name)}</option>`).join('')}
@@ -554,7 +568,7 @@ function renderOnboard(){
  return `<div class="ob">${dots(5)}
   <h1>Обсяг і рамки</h1><p class="sub">Меню підженеться під бюджет і калорійність.</p>
   <div class="slider-card"><div class="top"><span>Днів</span><span class="bigv" id="ob-days">${S.week.days}</span></div>
-   <input type="range" min="3" max="7" value="${S.week.days}" oninput="UI.days(this.value)"></div>
+   <input type="range" min="3" max="14" value="${S.week.days}" oninput="UI.days(this.value)"></div>
   <div class="slider-card"><div class="top"><span>Бюджет на тиждень</span><span class="bigv" id="ob-bud">${fmt(p.budget)}</span></div>
    <input type="range" min="800" max="8000" step="100" value="${p.budget}" oninput="UI.budget(this.value)"></div>
   <div class="slider-card"><div class="top"><span>Ціль по ккал/день (на особу)</span>
@@ -719,7 +733,7 @@ function filtersSheetHtml(){
  const p=P();
  return `<div class="sh-title">🎯 Фільтри тижня</div>
   <div class="slider-card"><div class="top"><span>Днів</span><span class="bigv" id="f-days">${S.week.days}</span></div>
-   <input type="range" min="3" max="7" value="${S.week.days}" oninput="UI.fdays(this.value)"></div>
+   <input type="range" min="3" max="14" value="${S.week.days}" oninput="UI.fdays(this.value)"></div>
   <div class="slider-card"><div class="top"><span>Бюджет / тиждень</span><span class="bigv" id="f-bud">${fmt(p.budget)}</span></div>
    <input type="range" min="800" max="8000" step="100" value="${p.budget}" oninput="UI.fbud(this.value)"></div>
   <div class="slider-card"><div class="top"><span>Ккал/день (на особу)</span>
@@ -808,6 +822,7 @@ window.UI={
   if(!Object.values(m).some(Boolean)){m[k]=true;return;}
   el.classList.toggle('on');},
  allerg(el,k){hap();const a=P().allerg;a.includes(k)?a.splice(a.indexOf(k),1):a.push(k);el.classList.toggle('on');},
+ period(n){hap();S.week.days=n;render();},
  days(v){S.week.days=+v;const el=document.getElementById('ob-days');if(el)el.textContent=v;},
  budget(v){P().budget=+v;const el=document.getElementById('ob-bud');if(el)el.textContent=fmt(+v);},
  kcalOn(el){hap();P().kcalOn=!P().kcalOn;el.classList.toggle('on');
