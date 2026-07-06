@@ -666,7 +666,7 @@ function renderBasket(){
   const leftTxt=fmtLeft(x.id,x.left);
   rows+=`<div class="bi ${ok?'done':''}" data-id="${x.id}" onclick="UI.check('${x.id}',this)">
    <div class="ck">${ok?'✓':''}</div>
-   ${x.prod&&x.prod.img?`<img class="pthumb" src="${x.prod.img}" loading="lazy" onerror="this.remove()" style="width:36px;height:36px;border-radius:8px;object-fit:cover;flex:none">`:''}
+   ${x.prod&&x.prod.img?`<img class="pthumb" src="${x.prod.img}" loading="lazy" onerror="this.remove()" onclick="event.stopPropagation();UI.prodInfo('${x.id}')" style="width:36px;height:36px;border-radius:8px;object-fit:cover;flex:none;cursor:pointer">`:''}
    <div style="flex:1;min-width:0"><div class="nm">${esc(x.name)}</div>
     ${x.prod?`<div class="prod">${esc(x.prod.title||'')}</div>`:''}
     ${leftTxt?`<div class="left">↩ ${leftTxt}</div>`:''}
@@ -869,6 +869,14 @@ window.UI={
    openSheet(`<h3 style="margin:2px 2px 8px">Не вдалось додати</h3><div class="hint" style="margin:2px 2px 12px">${zErr(res.d)}</div><button class="btn soft" onclick="UI.closeSheet()">Ок</button>`);}},
  openCart(chain){const u=`https://${chain}.zakaz.ua/uk/cart/`;closeSheet();
   try{if(tg&&tg.openLink)tg.openLink(u);else window.open(u,'_blank');}catch(_){window.open(u,'_blank');}},
+ prodInfo(id){const p=CAT&&CAT.map[id];if(!p){UI.find(id);return;}hap();
+  const desc=(p.desc||'').replace(/<[^>]+>/g,' ').replace(/\s+/g,' ').trim();
+  openSheet(`<div style="text-align:center">
+    ${p.img?`<img src="${p.img}" style="width:240px;max-width:100%;border-radius:14px">`:''}
+    <div class="dish-nm" style="margin:10px 0 2px">${esc(p.title||ING[id][0])}</div>
+    <div class="hint" style="margin-bottom:10px">${fmt(p.price)} · ${esc(p.packLabel||'')}</div></div>
+   ${desc?`<p class="sheep" style="color:var(--muted);font-size:13.5px;line-height:1.5;margin:0 2px 14px">${esc(desc)}</p>`:`<div class="hint" style="margin:0 2px 14px">Опису на сайті немає — дивись фото вище</div>`}
+   <button class="btn" onclick="UI.find('${id}')">Відкрити на zakaz →</button>`);},
 
  go(v){hap();nav(v);},
  back(){hap();nav('menu');},

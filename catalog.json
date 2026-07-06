@@ -1,5 +1,5 @@
 {
- "generated": "2026-07-06 13:13",
+ "generated": "2026-07-06 14:13",
  "store": {
   "id": "482211449",
   "name": "Таврія В Одеса DRIVE"
@@ -103,7 +103,8 @@
    "packLabel": "400 г",
    "loose": false,
    "img": "https://img3.zakaz.ua/136b9585dbf24a4f984b2a1b895611ef/1778389712-s350x350.jpg",
-   "url": "https://tavriav.zakaz.ua/uk/products/ovochi-kapusta-khaiberri-400g--04820259860257/"
+   "url": "https://tavriav.zakaz.ua/uk/products/ovochi-kapusta-khaiberri-400g--04820259860257/",
+   "desc": "Бланшована, глазурована капуста броколі, швидкозаморожена за технологією IQF<br>"
   },
   "kabachok": {
    "title": "Кабачок Україна",
@@ -353,7 +354,8 @@
    "packLabel": "800 г",
    "loose": false,
    "img": "https://img2.zakaz.ua/upload.version_1.0.9173f7f248a35ea62f9691d85533ad3e.350x350.jpeg",
-   "url": "https://tavriav.zakaz.ua/uk/products/kasha-aksa-800g--04820008124500/"
+   "url": "https://tavriav.zakaz.ua/uk/products/kasha-aksa-800g--04820008124500/",
+   "desc": "Різноманітні каші AXA PREMIUM з натуральних злаків та з додаванням фруктів та ягід. Зерно для каш вирощується в Латвії, оскільки балтійський клімат вважається одним із найкращих для злакових культур. Природна сила злаків для всієї родини!<b"
   },
   "makarony": {
    "title": "Макаронні вироби 7 спіралі 800г",
@@ -483,7 +485,8 @@
    "packLabel": "200 мл",
    "loose": false,
    "img": "https://img3.zakaz.ua/33464c05b3d84242b20f96736e9e09d6/1767349809-s350x350.jpg",
-   "url": "https://tavriav.zakaz.ua/uk/products/sous-priprava-shchedro-200ml-ukrayina--04823097410776/"
+   "url": "https://tavriav.zakaz.ua/uk/products/sous-priprava-shchedro-200ml-ukrayina--04823097410776/",
+   "desc": "Класичний соус, що прийшов до нас із Азії та став одним із улюблених в Україні. Використовується:<br> <br>— Як маринад до м’яса, птиці чи риби;</br> <br>— Як заправка до салатів;</br> <br>— До страв з рису чи локшини;</br> <br>— До овочів г"
   },
   "khlib": {
    "title": "Хліб Нове Діло Бабусин нарізаний 350г",
